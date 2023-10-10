@@ -15,12 +15,12 @@ function render(activity) {
 }
 
 function getActivity() {
-    fetch("http://www.boredapi.com/api/activity/")
+    fetch("https://www.boredapi.com/api/activity/")
     .then(response => {
         return response.json();
     })
     .then(res => {
         const activity = res.activity;
         render(activity);
-    })
+    });
 }
