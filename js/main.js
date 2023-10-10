@@ -6,7 +6,7 @@ const titleNode = document.querySelector(".title");
 const textNode = document.querySelector(".text");
 const btnNode = document.querySelector(".btn");
 
-btnNode.addEventListener('click', test);
+btnNode.addEventListener('click', getActivity);
 
 function render(activity) {
     titleNode.innerText = TITLE;
@@ -14,7 +14,7 @@ function render(activity) {
     bodyNode.style.background = BACKGROUND_STYLE;
 }
 
-function test() {
+function getActivity() {
     fetch("http://www.boredapi.com/api/activity/")
     .then(response => {
         return response.json();
